@@ -3,7 +3,7 @@ const ytdl = require('ytdl-core')
 const {YTSearcher} = require('ytsearcher')
 
 const searcher = new YTSearcher({
-    key: 'AIzaSyDJbtAKwOGI7osVMRHBVqEoi-PcNGPA3F4',
+    key: 'process.env.YOUTUBE_API',
     revealed: true
 })
 
@@ -120,4 +120,4 @@ client.on('message', async (message) => {
 })
 
 // Refactor to be pulled from a separate file
-client.login('ODA3NjY4ODcwODA1NzE3MDEz.YB7WQA.wvm1OIUy2-gwiLsJjozCaecv8tQ')
+client.login('process.env.TOKEN')
