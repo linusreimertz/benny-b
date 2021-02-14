@@ -18,6 +18,8 @@ client.on('ready', () => {
 client.on('message', async (message) => {
     const prefix = '!'
 
+    if(!message.content.startsWith(prefix)) return
+
     const serverQueue = queue.get(message.guild.id)
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g)
